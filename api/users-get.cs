@@ -10,7 +10,7 @@ namespace JRM.Functions
     public static class users_get
     {
         [FunctionName("users_get")]
-        public static async Task<IActionResult> Run(
+        public static IActionResult Run(
             [HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = "users")] HttpRequest req,
             ILogger log)
         {
