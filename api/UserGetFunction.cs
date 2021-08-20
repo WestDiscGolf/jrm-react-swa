@@ -9,9 +9,9 @@ using Newtonsoft.Json;
 
 namespace JRM.Functions
 {
-    public static class user_get
+    public static class UserGetFunction
     {
-        [FunctionName("user-get")]
+        [FunctionName("UserGet")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = "users/{id}")] HttpRequest req,
             string id,
