@@ -3,9 +3,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 
-[assembly: FunctionsStartup(typeof(functions_csharp_entityframeworkcore.Startup))]
+[assembly: FunctionsStartup(typeof(JRM.Api.Startup))]
 
-namespace functions_csharp_entityframeworkcore
+namespace JRM.Api
 {
     class Startup : FunctionsStartup
     {

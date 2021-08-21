@@ -4,7 +4,7 @@ using System;
 // using System.Collections.Generic;
 // using System.Text;
 
-namespace functions_csharp_entityframeworkcore
+namespace JRM.Api
 {
     public class JrmContext : DbContext
     {

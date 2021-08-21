@@ -4,7 +4,7 @@ using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.Extensions.Logging;
 using System.Threading.Tasks;
-using functions_csharp_entityframeworkcore;
+using JRM.Api;
 using Microsoft.EntityFrameworkCore;
 
 namespace JRM.Functions
