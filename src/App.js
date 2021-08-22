@@ -30,6 +30,7 @@ function App() {
       {!userInfo && (
         <>
         <a href={`/.auth/login/google?post_login_redirect_uri=${redirect}`}>Google Login</a><br/>
+        <a href={`/.auth/login/github?post_login_redirect_uri=${redirect}`}>GitHub Login</a><br/>
         </>
       )}      
       
