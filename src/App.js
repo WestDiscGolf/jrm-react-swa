@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 function App() {
   const redirect = window.location.pathname;
   const [userInfo, setUserInfo] = useState();
-  const [getClaims, setClaims] = useState();
+  const [claims, setClaims] = useState();
 
   useEffect(() => {
     (async () => {
@@ -55,7 +55,13 @@ function App() {
           <div className="user">
             <p>Welcome</p>
             <p>{userInfo && userInfo.userDetails}</p>
-            <p>{userInfo && userInfo.identityProvider}</p>
+            <p>{userInfo && userInfo.identityProvider}</p><br/>
+            {claims && (
+              <>
+                <p>Claims</p>
+                <p>{JSON.stringify(claims)}</p>
+              </>
+            )}            
           </div>
           <a href="/.auth/logout">Log out</a>
         </div>
