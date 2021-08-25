@@ -18,4 +18,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 This will start the react application on the standard port as well as point the web app to where the function app is running.
 
-4) On logging in the example will make a request to `/api/TestGet` and can then be debugged and should have access to the logged in user.
+4) Should be able to access the application now running under the Azure Static Web App port - `http://localhost:4280`
+
+5) On logging in the example will make a request to `/api/TestGet` and can then be debugged and should have access to the logged in user.
