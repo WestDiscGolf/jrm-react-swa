@@ -16,9 +16,11 @@ namespace JRM.Functions
         [FunctionName("TestGet")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = "TestGet")] HttpRequest req,
-            ILogger log,
-            ClaimsPrincipal principal)
+            ILogger log)
         {
+
+            ClaimsPrincipal principal = req.Parse();
+
             var retVal = new UserInfo { Name = "🕶" };
 
             if(principal != null  && principal.Identity.IsAuthenticated)

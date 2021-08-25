@@ -12,6 +12,10 @@ function App() {
 
   async function getUserInfo() {
     try {
+
+      const another = await fetch('/api/TestGet');
+
+
       const response = await fetch('/.auth/me');
       const payload = await response.json();
       const { clientPrincipal } = payload;
