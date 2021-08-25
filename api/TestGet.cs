@@ -15,12 +15,11 @@ namespace JRM.Functions
     {
         [FunctionName("TestGet")]
         public static async Task<IActionResult> Run(
-            [HttpTrigger(AuthorizationLevel.Function, "get", Route = "TestGet")] HttpRequest req,
-            ILogger log)
+            [HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = "TestGet")] HttpRequest req,
+            ILogger log,
+            ClaimsPrincipal principal)
         {
             var retVal = new UserInfo { Name = "🕶" };
-
-            var principal = req.Parse();
 
             if(principal != null  && principal.Identity.IsAuthenticated)
             {
