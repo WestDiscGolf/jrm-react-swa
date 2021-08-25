@@ -7,7 +7,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 # To Run With Access to Claims Principal
 
-1) Install the Azure Static Web Apps Cli - npm install -g @azure/static-web-apps-cli
+1) Install the Azure Static Web Apps Cli - `npm install -g @azure/static-web-apps-cli`
 (more info - https://github.com/Azure/static-web-apps-cli)
 
 2) Run function app through debugging in vscode or Visual Studio or on command line `func start`
