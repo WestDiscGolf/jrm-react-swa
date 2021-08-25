@@ -3,10 +3,12 @@ import React, { useState, useEffect } from 'react';
 function App() {
   const redirect = window.location.pathname;
   const [userInfo, setUserInfo] = useState();
+  const [getClaims, setClaims] = useState();
 
   useEffect(() => {
     (async () => {
       setUserInfo(await getUserInfo());
+      setClaims(await getClaims())
     })();
   }, []);
 
@@ -14,8 +16,22 @@ function App() {
     try {
       const response = await fetch('/.auth/me');
       const payload = await response.json();
+
       const { clientPrincipal } = payload;
       return clientPrincipal;
+    } catch (error) {
+      //console.error('No profile could be found');
+      return undefined;
+    }
+  }
+
+  async function getClaims() {
+    try {
+      const response = await fetch('api/TestGet');
+      const payload = await response.json();
+
+      const { claimsPrincipal } = payload;
+      return claimsPrincipal;
     } catch (error) {
       //console.error('No profile could be found');
       return undefined;

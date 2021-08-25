@@ -18,7 +18,7 @@ namespace JRM.Api
         public IEnumerable<string> UserRoles { get; set; }
     }
 
-    public static ClaimsPrincipal Parse(HttpRequest req)
+    public static ClaimsPrincipal Parse(this HttpRequest req)
     {
         var principal = new ClientPrincipal();
 
