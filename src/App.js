@@ -18,7 +18,7 @@ function App() {
       const payload = await response.json();
 
       const { clientPrincipal } = payload;
-      return payload;
+      return clientPrincipal;
     } catch (error) {
       //console.error('No profile could be found');
       return undefined;
