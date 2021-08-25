@@ -18,7 +18,7 @@ function App() {
       const payload = await response.json();
 
       const { clientPrincipal } = payload;
-      return clientPrincipal;
+      return payload;
     } catch (error) {
       //console.error('No profile could be found');
       return undefined;
@@ -29,9 +29,7 @@ function App() {
     try {
       const response = await fetch('api/TestGet');
       const payload = await response.json();
-
-      const { claimsPrincipal } = payload;
-      return claimsPrincipal;
+      return payload;
     } catch (error) {
       //console.error('No profile could be found');
       return undefined;
