@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import LoginForm from './components/LoginForm';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   const redirect = window.location.pathname;
@@ -25,17 +28,13 @@ function App() {
   const value = 'World';
   return (
     <div>
-      Hello {value}. We're running react! <br/><br/>
-
       {!userInfo && (
-        <>
-        <a href={`/.auth/login/google?post_login_redirect_uri=${redirect}`}>Google Login</a><br/>
-        <a href={`/.auth/login/github?post_login_redirect_uri=${redirect}`}>GitHub Login</a><br/>
-        </>
-      )}      
+          <LoginForm/>
+      )}
       
       {userInfo && (
         <div>
+          Hello {value}. We're running react! <br/><br/>
           <div className="user">
             <p>Welcome</p>
             <p>{userInfo && userInfo.userDetails}</p>
