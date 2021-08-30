@@ -4,7 +4,6 @@ import LoginForm from './components/LoginForm';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
-  const redirect = window.location.pathname;
   const [userInfo, setUserInfo] = useState();
   const [claims, setClaims] = useState();
 
